@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+
+import Contact from "./Contact";
+
 const Section = styled.div`
   display: flex;
   justify-content: center;

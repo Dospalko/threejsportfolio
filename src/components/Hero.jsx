@@ -11,6 +11,7 @@ const Section = styled.div`
   scroll-snap-align: center;
   flex-direction: column;
   align-items: center;
+  
   @media only screen and (max-width: 768px) {
     height: 200vh;
   }
@@ -120,9 +121,9 @@ const Hero = () => {
           <Title> Either you run the day or the day runs you.</Title>
           <WhatWeDo>
             <Line src="./img/line.png" />
-            <Subtitle>What i do?</Subtitle>
+            <Subtitle>What do i do?</Subtitle>
           </WhatWeDo>
-          <Desc>I enjoy learning and creating new projects</Desc>
+          <Desc>I enjoy learning new technologies and creating new projects</Desc>
           <Button>Learn more</Button>
         </Left>
         <Right>

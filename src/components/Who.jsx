@@ -112,8 +112,10 @@ const Who = () => {
             <Line src="./img/line.png" />
             <Subtitle>Who am i?</Subtitle>
           </WhatWeDo>
-          <Desc>I'm 20 years old student who enjoys programming , design , testing and a lot of more.</Desc>
-          <Button>My works</Button>
+          <Desc>I am a 21-year-old student who studies at the Technical University in Kosice. I enjoy discovering new technologies and improving my knowledge when creating projects.</Desc>
+          <Button onClick={() => window.location.href = 'https://github.com/emKocode'}>My works</Button>
+
+
         </Right>
       </Container>
     </Section>
