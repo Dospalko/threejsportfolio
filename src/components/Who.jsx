@@ -27,9 +27,16 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+    text-align: center;
+  }
 `;
 const Title = styled.h1`
   font-size: 74px;
+  @media only screen and (max-width: 768px) {
+    font-size: 60px;
+    }
 `;
 const WhatWeDo = styled.div`
   display: flex;
@@ -61,6 +68,9 @@ const Button = styled.button`
 const Left = styled.div`
   flex: 1;
   position: relative;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Img = styled.img`

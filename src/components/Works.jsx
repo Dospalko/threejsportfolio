@@ -34,6 +34,7 @@ const Left = styled.div`
 
   @media only screen and (max-width: 768px) {
     padding: 20px;
+    flex: 1;
     justify-content: center;
   }
 `;
@@ -57,16 +58,16 @@ const ListItem = styled.li`
     font-size: 24px;
     color: white;
     -webkit-text-stroke: 0px;
+   
+    
   }
- 
-
 
   &:after {
     content: "${(props) => props.text}";
     position: absolute;
     top: 0;
     left: 0;
-    color: pink;
+    color: rgb(73, 197, 219);
     width: 0px;
     overflow: hidden;
     white-space: nowrap;
@@ -86,6 +87,7 @@ const ListItem = styled.li`
 `;
 const Right = styled.div`
   flex: 1;
+
 `;
 const Works = () => {
   const [work, setWork] = useState("Web development");
