@@ -4,6 +4,7 @@ import Test from "./components/Cube";
 import Who from "./components/Who";
 import Works from "./components/Works";
 import styled from "styled-components";
+import Projects from "./components/Projects";
 
 const Container = styled.div`
   height: 100vh;
@@ -27,7 +28,9 @@ function App() {
     <Container>
       <Hero />
       <Who />
+      <Projects />
       <Works />
+
       <Contact />
     </Container>
   );

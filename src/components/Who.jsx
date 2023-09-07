@@ -8,10 +8,14 @@ import { OrbitControls } from "@react-three/drei";
 const Section = styled.div`
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   scroll-snap-align: center;
- 
+  flex-direction: column;
   align-items: center;
+
+  @media only screen and (max-width: 768px) {
+   
+  }
 `;
 const Container = styled.div`
   height: 100vh;
@@ -19,6 +23,12 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   scroll-snap-align: center;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 const Right = styled.div`

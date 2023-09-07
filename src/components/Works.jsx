@@ -14,6 +14,7 @@ const Section = styled.div`
   color: black;
   font-size: 14px;
   font-weight: 300;
+
 `;
 
 const Container = styled.div`
@@ -24,6 +25,8 @@ const Container = styled.div`
   @media only screen and (max-width: 768px) {
     width: 100%;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -58,8 +61,11 @@ const ListItem = styled.li`
     font-size: 24px;
     color: white;
     -webkit-text-stroke: 0px;
-   
-    
+  
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 
   &:after {
@@ -87,8 +93,9 @@ const ListItem = styled.li`
 `;
 const Right = styled.div`
   flex: 1;
-
+ 
 `;
+
 const Works = () => {
   const [work, setWork] = useState("Web development");
   return (

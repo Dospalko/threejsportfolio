@@ -11,9 +11,9 @@ const Section = styled.div`
   scroll-snap-align: center;
   flex-direction: column;
   align-items: center;
-  
+
   @media only screen and (max-width: 768px) {
-    height: 200vh;
+  
   }
 `;
 const Container = styled.div`
@@ -85,6 +85,7 @@ const Right = styled.div`
   flex: 3;
   position: relative;
   @media only screen and (max-width: 768px) {
+    display: none;
     flex: 1;
     width: 100%;
   }
@@ -102,8 +103,8 @@ const Img = styled.img`
   margin: auto;
   animation: animate 2s infinite ease alternate;
   @media only screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
+    
+    display: none;
   }
   @keyframes animate {
     to {
