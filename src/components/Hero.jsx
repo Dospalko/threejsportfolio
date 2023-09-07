@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import styled from "styled-components";
+import styled , {keyframes} from "styled-components";
 import Navbar from "./Navbar";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
@@ -40,9 +40,21 @@ const Left = styled.div`
     align-items: center;
   }
 `;
-
+const colorPulse = keyframes`
+  0% {
+    color: #49c5db;
+  }
+  50% {
+    color: #007bff;
+  }
+  100% {
+    color: #49c5db;
+  }
+`;
 const Title = styled.h1`
+animation: ${colorPulse} 2s linear infinite;
   font-size: 74px;
+  
   @media only screen and (max-width: 768px) {
     text-align: center;
   }

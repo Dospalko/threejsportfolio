@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const Section = styled.div`
-
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
@@ -10,13 +9,10 @@ const Section = styled.div`
   align-items: center;
 
   color: white; /* Text color */
- 
-
-    
- 
+  
 `;
 const Container = styled.div`
-     max-width: 1400px;
+  max-width: 1400px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -24,7 +20,6 @@ const Container = styled.div`
   padding: 20px;
   text-align: center;
   scroll-snap-align: center;
-
 `;
 const ProjectsSection = styled.div`
   flex: 1;
@@ -34,16 +29,97 @@ const ProjectsContainer = styled.div`
   padding: 40px 0; /* Increase top and bottom padding for better spacing */
 `;
 
+// Define a keyframe animation for the glitch effect
+const glitch = keyframes`
+  0% {
+    transform: translate(0);
+    opacity: 1;
+  }
+  5% {
+    transform: translate(-5px, 5px);
+    opacity: 0.75;
+  }
+  10% {
+    transform: translate(-5px, -5px);
+    opacity: 0.75;
+  }
+  15% {
+    transform: translate(5px, -5px);
+    opacity: 0.75;
+  }
+  20% {
+    transform: translate(5px, 5px);
+    opacity: 0.75;
+  }
+  25% {
+    transform: translate(-5px, 5px);
+    opacity: 0.5;
+  }
+  30% {
+    transform: translate(-5px, -5px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: translate(5px, -5px);
+    opacity: 0.5;
+  }
+  40% {
+    transform: translate(5px, 5px);
+    opacity: 0.5;
+  }
+  45% {
+    transform: translate(-5px, 5px);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(-5px, -5px);
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(5px, -5px);
+    opacity: 0.25;
+  }
+  60% {
+    transform: translate(5px, 5px);
+    opacity: 0.25;
+  }
+  65% {
+    transform: translate(-5px, 5px);
+    opacity: 0;
+  }
+  70% {
+    transform: translate(-5px, -5px);
+    opacity: 0;
+  }
+  75% {
+    transform: translate(5px, -5px);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(5px, 5px);
+    opacity: 0;
+  }
+  85% {
+    transform: translate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+`;
+
 const ProjectsTitle = styled.h2`
-color: rgb(73, 197, 219);
   font-size: 68px;
   margin-bottom: 20px;
+  color: rgb(73, 197, 219);
+  animation: ${glitch} 2s linear infinite; /* Apply the glitch animation */
 `;
 
 const ProjectsGrid = styled.div`
   margin-top: 80px;
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
   gap: 20px;
   width: 1440px;
   @media only screen and (max-width: 768px) {
@@ -61,10 +137,13 @@ const ProjectCard = styled.div`
   border-radius: 5px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
+  
   &:hover {
     transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   }
 `;
+
 
 const ProjectImage = styled.img`
   max-width: 100%;
@@ -121,7 +200,7 @@ const Projects = () => {
   ];
 
   return (
-    <Section>
+    <Section id='projects'>
       <Container>
         <ProjectsSection>
           <ProjectsContainer>

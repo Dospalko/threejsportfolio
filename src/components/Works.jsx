@@ -14,6 +14,7 @@ const Section = styled.div`
   color: black;
   font-size: 14px;
   font-weight: 300;
+  
 
 `;
 
@@ -99,7 +100,7 @@ const Right = styled.div`
 const Works = () => {
   const [work, setWork] = useState("Web development");
   return (
-    <Section>
+    <Section id='works'>
       <Container>
         <Left>
           <List>

@@ -30,7 +30,6 @@ function App() {
       <Who />
       <Projects />
       <Works />
-
       <Contact />
     </Container>
   );

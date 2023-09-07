@@ -103,7 +103,7 @@ const Img = styled.img`
 
 const Who = () => {
   return (
-    <Section>
+    <Section id='who'>
       <Container>
         <Left>
         <Canvas camera={{ position: [5, 5, 5], fov: 25 }}>

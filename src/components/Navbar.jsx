@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-
+import { Link, animateScroll as scroll } from "react-scroll";
+import Works from "./Works";
 
 const Section = styled.div`
   display: flex;
   justify-content: center;
-    @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 768px) {
     width: 100%;
   }
 `;
@@ -53,12 +54,16 @@ const Icon = styled.img`
   cursor: pointer;
 `;
 const Button = styled.button`
-width: 100px;
-padding: 10px;
-background-color: hsl(186.84563758389262, 65.63876651982379%, 55.490196078431374%);
-border: none;
-border-radius: 20px;
-cursor: pointer;
+  width: 100px;
+  padding: 10px;
+  background-color: hsl(
+    186.84563758389262,
+    65.63876651982379%,
+    55.490196078431374%
+  );
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
 `;
 
 const Navbar = () => {
@@ -68,10 +73,48 @@ const Navbar = () => {
         <Links>
           <Logo src="./img/logo.png" />
           <List>
-            <ListItem>Home</ListItem>
-            <ListItem>About</ListItem>
-            <ListItem>Work</ListItem>
-            <ListItem>Contact</ListItem>
+            <ListItem>
+              <Link
+                activeClass="active"
+                to='who'
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                About
+              </Link>
+            </ListItem>
+            <ListItem>  <Link
+                activeClass="active"
+                to='projects'
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Projects
+              </Link></ListItem>
+            <ListItem>  <Link
+                activeClass="active"
+                to='works'
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Works
+              </Link></ListItem>
+            <ListItem>  <Link
+                activeClass="active"
+                to='contact'
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                Contact
+              </Link></ListItem>
           </List>
         </Links>
         <Icons>
